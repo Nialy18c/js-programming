@@ -190,13 +190,13 @@ console.log(pat2);
 //     1
 
 // ------------------ 8 ---------------------------
-
+/*
 for (let i = 1; i <= ro; i++) {
     for (let s = 1; s <= ro-i; s++) {
         pat += " ";
     }
     for (let j =1; j <= i; j++) {
-        pat += j;
+        pat += `${j} `;
     }
     if (i == ro) {
         
@@ -206,15 +206,95 @@ for (let i = 1; i <= ro; i++) {
         pat += "\n";
     }
 }
-// console.log(pat);
+for (let i = 1; i <= ro; i++) {   
+    if (i != 1) {
+        for (let j = 1; j <= i; j++) {   
+            if (i == j) {
+                continue;
+            }else{
+                pat2 += " ";
+            }
+        }
+        for (let j = i; j <= ro; j++) {   
+            pat2 += `${j} `;
+        }
+        pat2 += "\n";
 
-for (let i = 1; i <= 5; i++) {
-//     for (let j = 1; j <= 5; j++) {
-//         pat += " ";
-// }    
-    for (let j = 1; j <= i; j++) {
-                pat += i;
-    }    
-    pat += "\n";
+        
+    }else{
+        continue;
+    }
 }
 console.log(pat);
+console.log(pat2);
+*/
+// -------------------------------------------------
+//     1 
+//    1 2 
+//   1 2 3 
+//  1 2 3 4 
+// 1 2 3 4 5 
+//  2 3 4 5 
+//   3 4 5 
+//    4 5 
+//     5 
+
+// ------------------- 9 ------------------
+
+for (let i = 1; i <= ro; i++) {
+
+    if (i % 2 == 0) {
+        pat += "\n";
+        continue;
+    }
+    else{
+        for (let s = 1; s <= ro-i; s++) {
+            pat += " ";
+        }
+        for (let j =1; j <= i; j++) {
+            pat += `${j} `;
+        }
+        if (i == ro) {
+            
+            break;
+        }        
+        else{
+            pat += "\n";
+        }
+    }
+    
+}
+for (let i = 1; i <= ro; i++) {   
+        if (i != 1) {
+            if (i % 2 == 0) {
+                pat += "\n";
+                continue;
+            }else{
+                for (let j = 1; j <= i; j++) {   
+                    if (i == j) {
+                        continue;
+                    }else{
+                        pat2 += " ";
+                    }
+                }
+                for (let j = i; j <= ro; j++) {   
+                    pat2 += `${j} `;
+                }
+                pat2 += "\n";  
+            } 
+        }
+        else{
+            continue;
+        }
+        
+}
+    
+
+
+
+
+console.log(pat);
+console.log(pat2);
+// for (let i = 0; i < 5; i++) {
+   
+// }
