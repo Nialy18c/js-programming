@@ -283,7 +283,7 @@ for (let i = 1; i <= ro; i++) {
                 pat2 += "\n";  
             } 
         }
-        else{
+         else{
             continue;
         }
         
